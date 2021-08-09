@@ -1,0 +1,9 @@
+#!/bin/sh
+xfce4-terminal
+while :; do
+linkvar=$(dialog --stdout --title "Imput Link" --inputbox "Song Youtube Link: " 0 0)
+namevar=$(dialog --stdout --title "Imput The Song Name" --inputbox "Song Name: " 0 0)
+namevarfix=$(echo $namevar | sed 's/ /-/g' | sed 's!/!_!g')
+youtube-dl -x --audio-format m4a -o  /home/asimov/Music/$namevarfix.webm $linkvar
+
+done
