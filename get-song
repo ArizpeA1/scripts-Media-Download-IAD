@@ -1,5 +1,4 @@
 #!/bin/sh
-xfce4-terminal
 while :; do
 linkvar=$(dialog --stdout --title "Imput Link" --inputbox "Song Youtube Link: " 0 0)
 namevar=$(dialog --stdout --title "Imput The Song Name" --inputbox "Song Name: " 0 0)
